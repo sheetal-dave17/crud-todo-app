@@ -1,13 +1,18 @@
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header>
-       Hello App
-      </header>
-    </div>
-  );
+import {Provider} from 'react-redux';
+import store from './redux/store';
+
+import Todo from './pages/Todo'
+
+class App extends React.Component {
+    render() {
+        return (
+            <Provider store={store}>
+                <Todo/>
+            </Provider>
+        );
+    }
 }
 
 export default App;
